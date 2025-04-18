@@ -35,7 +35,7 @@ async def show_random_emojis(message):
     emoji_message = await message.reply_text(' '.join(random.choices(emojis, k=1)))
     return emoji_message
     
-credit ="𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎" 
+credit ="SAMEER JI BOT" 
 # Initialize the bot
 bot = Client(
     "bot",
@@ -162,7 +162,7 @@ async def help_handler(client: Client, m: Message):
         "• 🎓 All Non DRM+AES Encrypted URLs\n"
         "• 🎓 MPD URLs if the key is known (e.g., Mpd_url?key=key XX:XX)</code></pre>\n\n"
         "🚀 You are not subscribed to any plan yet!\n\n"
-        "<pre><code>Contact to 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎 for buy membership.</code></pre>"
+        "<pre><code>Contact to SAMEER JI BOT for buy membership.</code></pre>"
     ))
 
 @bot.on_message(filters.command(["help"]))
@@ -170,7 +170,7 @@ async def txt_handler(client: Client, m: Message):
     await bot.send_message(m.chat.id, text= (
         "<pre><code> 🎉Congrats! You are using MR BRIJESH:</code></pre>\n┣\n"
         "┣⪼01. Send /start - To Check Bot \n┣\n"
-        "┣⪼02. Send /brijesh - for extract txt file\n┣\n"
+        "┣⪼02. Send /bot - for extract txt file\n┣\n"
         "┣⪼03. Send /y2t - YouTube to .txt Convert\n┣\n"
         "┣⪼04. Send /logs - To see Bot Working Logs\n┣\n"
         "┣⪼05. Send /cookies - To update YT cookies.\n┣\n"
@@ -372,7 +372,7 @@ async def youtube_to_txt(client, message: Message):
     # Remove the temporary text file after sending
     os.remove(txt_file)
 
-@bot.on_message(filters.command(["brijesh"]) )
+@bot.on_message(filters.command(["bot"]) )
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"<pre><code>**🔹Hi I am Poweful TXT Downloader📥 Bot.**</code></pre>\n<pre><code>🔹**Send me the TXT file and wait.**</code></pre>")
     input: Message = await bot.listen(editable.chat.id)
